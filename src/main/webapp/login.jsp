@@ -1,15 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Administrator
-  Date: 2021/1/27
-  Time: 12:31
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>系统登录-超市订单管理系统</title>
+    <title>market system login</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/statics/css/style.css">
     <script>
 

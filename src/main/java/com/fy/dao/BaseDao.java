@@ -27,7 +27,7 @@ public class BaseDao {
         }
         driver = properties.getProperty("driver");
         url = properties.getProperty("url");
-        username = properties.getProperty("username");
+        username = properties.getProperty("user");
         password = properties.getProperty("password");
     }
 
@@ -54,12 +54,13 @@ public class BaseDao {
 
     //CRUD
     public static int execute(Connection connection, PreparedStatement preparedStatement, String sql, Object[] params ) throws SQLException {
+        int UpdateRow = 0;
         preparedStatement = connection.prepareStatement(sql);
         for (int i = 0; i < params.length; i++) {
             preparedStatement.setObject(i+1,params[i]);
         }
-        int updateRows = preparedStatement.executeUpdate(sql);
-        return updateRows;
+        UpdateRow = preparedStatement.executeUpdate();
+        return UpdateRow;
     }
 
     public static boolean closeResource( Connection connection, PreparedStatement preparedStatement, ResultSet resultSet )  {

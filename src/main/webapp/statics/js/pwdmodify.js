@@ -13,7 +13,7 @@ $(function(){
 	newpassword.next().html("*");
 	rnewpassword.next().html("*");
 
-	oldpassword.on("blur",function(){
+	 oldpassword.on("blur",function(){
 		$.ajax({
 			type:"GET",
 			url:path+"/jsp/user.do",
@@ -40,6 +40,8 @@ $(function(){
 	}).on("focus",function(){
 		validateTip(oldpassword.next(),{"color":"#666666"},"* 请输入原密码",false);
 	});
+
+
 
 	newpassword.on("focus",function(){
 		validateTip(newpassword.next(),{"color":"#666666"},"* 密码长度必须是大于6小于20",false);
@@ -69,8 +71,7 @@ $(function(){
 		oldpassword.blur();
 		newpassword.blur();
 		rnewpassword.blur();
-		if(oldpassword.attr("validateStatus") == "true"
-			&& newpassword.attr("validateStatus") == "true"
+		if (newpassword.attr("validateStatus") == "true"
 			&& rnewpassword.attr("validateStatus") == "true"){
 			if(confirm("确定要修改密码？")){
 				$("#userForm").submit();
