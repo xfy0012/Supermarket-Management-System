@@ -21,6 +21,14 @@ Handles database operations via JDBC.
 Displays order information, including order ID, user details, and total amount.
 Supports administrators in editing order details (e.g., status and amount).
 
+Learning Purpose
+
+This project is developed as part of my Java Web learning journey. The primary goals are:
+
+To practice the core concepts of JavaWeb development, including Servlets, JSP, and Session management.
+To build a practical application with CRUD operations integrated into a relational database.
+To enhance my understanding of web application structure and backend logic.
+
 Tech Stack
 
 Language: Java
@@ -36,3 +44,5 @@ Java JDK: Version 1.8 or higher
 Tomcat: Version 10.0 or higher
 MySQL: Version 5.7 or higher
 Maven: Version 3.6 or higher
+
+This project is inspired by an example from https://www.bilibili.com/video/BV12J41137hu/?vd_source=e2cd0b64cb78c7ca63b4985eba6fff05
